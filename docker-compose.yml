@@ -8,4 +8,4 @@ services:
       TOKEN: ${TOKEN}
     volumes:
       - /app-config:/config
-    restart: unless-started
+    restart: unless-stopped
