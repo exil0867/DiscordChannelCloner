@@ -1,5 +1,13 @@
-FROM python:3
-ADD app.py /
+FROM clearlinux/python
+
+RUN mkdir /config
+
+VOLUME /config
+
+ADD app.py .
+
+RUN pip install --upgrade pip
 
 RUN pip install -U discord.py-self python-dotenv
-CMD ['python', './app.py']
+
+CMD ["python", "./app.py"]

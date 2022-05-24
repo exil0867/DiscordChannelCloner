@@ -9,7 +9,7 @@ client = discord.Client()
 
 config = None
 
-with open('config.json', 'r') as read_file:
+with open('config/config.json', 'r') as read_file:
     config = json.load(read_file)
 
 async def cloneMessage(message, channel_id, hook_id):
