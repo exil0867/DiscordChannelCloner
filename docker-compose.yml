@@ -7,5 +7,5 @@ services:
     environment:
       TOKEN: ${TOKEN}
     volumes:
-      - /app-config:/config
+      - ${CONFIG_DIRECTORY}:/config
     restart: unless-stopped
