@@ -1,4 +1,4 @@
-FROM clearlinux/python
+FROM python:3
 
 RUN mkdir /config
 
