@@ -10,17 +10,16 @@ A script to clone messages from a single or multipe channels into a specified ch
     "source": [13245678913456789, 13245678913456789] // An array of IDs of channels to clone messages from.
   }
 ]
-
 ```
 
-# .env example
+# Deploy the script using Docker
+Run:
 ```
-TOKEN=Your [self-bot] token here
+git clone git@github.com:exilvm/DiscordChannelCloner.git %% cd DiscordChannelCloner
 ```
-
-# Build the Docker image
+Set your TOKEN and CONFIG_DIRECTORY (the path to a directory that contains config.json) environment variables and run:
 ```
-docker build -t discord-channel-cloner .
+docker-compose up -d
 ```
 
 # About using this script for regular bots.
