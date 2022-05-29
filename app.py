@@ -24,6 +24,10 @@ async def cloneMessage(message, channel_id, hook_id):
     await hook.send(content=message.content, username=f'{message.author.display_name} in {message.channel.name} at {message.created_at}', avatar_url=message.author.avatar_url, files=files)
 
 @client.event
+async def on_ready():
+    await client.change_presence(status=discord.Status.invisible, afk=False)
+
+@client.event
 async def on_message(message):
     for x in config:
         if message.channel.id in x['source']:
