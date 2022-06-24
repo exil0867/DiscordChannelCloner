@@ -21,7 +21,7 @@ async def cloneMessage(message, channel_id, hook_id):
     for x in attachments:
         file = await x.to_file()
         files.append(file)
-    await hook.send(content=message.content, username=f'{message.author.display_name} in {message.channel.name} at {message.created_at}', avatar_url=message.author.avatar_url, files=files)
+    await hook.send(content=message.content, username=f'{message.author.name}#{message.author.discriminator} in {message.channel.name} at {message.created_at}', avatar_url=message.author.avatar_url, files=files)
 
 @client.event
 async def on_ready():
