@@ -15,7 +15,7 @@ A script to clone messages from a single or multipe channels into a specified ch
 # Deploy the script using Docker
 Run:
 ```
-git clone git@github.com:exilvm/DiscordChannelCloner.git %% cd DiscordChannelCloner
+git clone git@github.com:exilvm/DiscordChannelCloner.git && cd DiscordChannelCloner
 ```
 Set your TOKEN and CONFIG_DIRECTORY (the path to a directory that contains config.json) environment variables and run:
 ```
