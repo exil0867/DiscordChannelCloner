@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   discord-channel-cloner:
-    build: .
+    image: ghcr.io/exilvm/discordchannelcloner:master
     container_name: discord-channel-cloner
     environment:
       TOKEN: ${TOKEN}

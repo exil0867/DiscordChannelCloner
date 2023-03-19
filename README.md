@@ -1,5 +1,5 @@
 # DiscordChannelCloner
-A script to clone messages from a single or multipe channels into a specified channel using Discord Webhooks. [Cross-server channel cloning is supported]
+A script to clone messages (along with its details) from a single or multipe channels into a specified channel using Discord Webhooks. [Cross-server channel cloning is supported]
 
 # config.json example
 ```json
@@ -12,7 +12,17 @@ A script to clone messages from a single or multipe channels into a specified ch
 ]
 ```
 
-# Deploy the script using Docker
+### Note that the self-host user must have the `manage_webhooks` permission.
+
+# Deploy using Docker Compose (Recommended)
+Check the `docker-compose.yml` defined in this repository: https://github.com/exilvm/DiscordChannelCloner/blob/master/docker-compose.yml
+
+# The docker image can be found at [GitHub's Container Registry](https://github.com/exilvm/DiscordChannelCloner/pkgs/container/discordchannelcloner):
+```
+docker pull ghcr.io/exilvm/discordchannelcloner:master
+```
+
+# Or you can build the image on your own
 Run:
 ```
 git clone git@github.com:exilvm/DiscordChannelCloner.git && cd DiscordChannelCloner
