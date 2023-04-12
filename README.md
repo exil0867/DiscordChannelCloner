@@ -1,4 +1,4 @@
-# Discord Channel Cloner
+# DiscordChannelCloner
 A script to clone messages (along with their details) from single or multiple channels into a specified channel using Discord Webhooks. Cross-server channel cloning is supported.
 
 ## Configuration
