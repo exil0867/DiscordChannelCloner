@@ -33,7 +33,7 @@ async def cloneMessage(message, channel_id, hook_id):
     embed.add_field(name="Channel ID", value=channel_id)
     embed.add_field(name="Hook ID", value=hook_id)
     embed.add_field(name="Message date", value=message.created_at)
-    hook_message = await hook.send(embed=embed, wait=True)
+    hook_message = await hook.send(embed=embed, wait=True, allowed_mentions=discord.AllowedMentions.none())
     await hook_message.reply(content=message.content, files=files)
 
 @client.event
