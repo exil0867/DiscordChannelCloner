@@ -25,7 +25,7 @@ async def cloneMessage(message, channel_id, hook_id):
         title='Message details',
         timestamp=message.created_at
     )
-    embed.set_author(name=f'{message.author.name}#{message.author.discriminator}', icon_url=message.author.avatar_url)
+    embed.set_author(name=f'{message.author.name}#{message.author.discriminator}', icon_url=message.author.avatar_url or None)
     embed.add_field(name="Server name", value=message.channel.guild.name)
     embed.add_field(name="Channel name", value=message.channel.name)
     embed.add_field(name="Author ID", value=message.author.id)
