@@ -8,6 +8,6 @@ ADD app.py .
 
 RUN curl -sSL https://install.python-poetry.org | python3 -
 
-RUN poetry install
+RUN /root/.local/bin/poetry install
 
 CMD ["python", "./app.py"]
