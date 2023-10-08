@@ -1,6 +1,8 @@
 FROM python:3.11-slim-bookworm
 
-RUN bash ./install-deps.sh
+ADD install-deps.sh /tmp
+
+RUN bash /tmp/install-deps.sh
 
 RUN mkdir /config
 
