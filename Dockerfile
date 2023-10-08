@@ -1,5 +1,7 @@
 FROM python:3.11-slim-bookworm
 
+RUN bash ./install-deps.sh
+
 RUN mkdir /config
 
 VOLUME /config
