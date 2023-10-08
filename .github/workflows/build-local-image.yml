@@ -1,18 +1,18 @@
-name: Build local Docker image on Pull Request
+name: Build and run the local Dockerfile
 
 on:
+  push:
+    branches: ['master']
   pull_request:
     branches: ['master']
 
+env:
+  PROJECT_NAME: ${{ github.event.repository.name }}
+
 jobs:
-  build-image:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Build Docker image
-        uses: docker/build-push-action@0565240e2d4ab88bba5387d719585280857ece09
-        with:
-          context: .
-          push: false
-          tags: latest
+      - uses: actions/checkout@v3
+      - name: Build
+        run: docker build . --file Dockerfile --tag ${{ env.PROJECT_NAME }}
