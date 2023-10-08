@@ -1,9 +1,5 @@
 FROM python:3.11-slim-bookworm
 
-ADD install-deps.sh /tmp
-
-RUN bash /tmp/install-deps.sh
-
 RUN mkdir /config
 
 VOLUME /config
@@ -14,8 +10,8 @@ ADD pyproject.toml .
 
 ADD poetry.lock .
 
-RUN curl -sSL https://install.python-poetry.org | python3 -
+ADD install-deps.sh /tmp
 
-RUN /root/.local/bin/poetry install
+RUN bash /tmp/install-deps.sh
 
 CMD ["/root/.local/bin/poetry", "run", "python", "/app.py"]
