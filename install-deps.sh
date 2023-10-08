@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-DEBIAN_FRONTEND=noninteractive apt -y update
+apt -y update
 
-sudo apt install curl -y
+apt install curl -y
 
 curl -sSL https://install.python-poetry.org | python3 -
 
