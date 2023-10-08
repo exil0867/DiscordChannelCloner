@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3.11-bookworm
 
 RUN mkdir /config
 
@@ -6,8 +6,8 @@ VOLUME /config
 
 ADD app.py .
 
-RUN pip install --upgrade pip
+RUN curl -sSL https://install.python-poetry.org | python3 -
 
-RUN pip install -U discord.py-self python-dotenv
+RUN poetry install
 
 CMD ["python", "./app.py"]

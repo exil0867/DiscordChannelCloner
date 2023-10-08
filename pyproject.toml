@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "discordchannelcloner"
+version = "1.0.0"
+description = ""
+authors = ["Exil <exil@n0t3x1l.ovh>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.6"
+"discord.py-self" = "2.0.0"
+python-dotenv = "1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
