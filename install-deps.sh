@@ -6,4 +6,4 @@ apt install curl -y
 
 curl -sSL https://install.python-poetry.org | python3 -
 
-poetry install
+/root/.local/bin/poetry install
