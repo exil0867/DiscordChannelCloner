@@ -14,4 +14,4 @@ RUN curl -sSL https://install.python-poetry.org | python3 -
 
 RUN /root/.local/bin/poetry install
 
-CMD ["python", "./app.py"]
+CMD ["/root/.local/bin/poetry", "run", "python", "/app.py"]
