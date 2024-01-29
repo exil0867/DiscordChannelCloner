@@ -8,7 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "3.11.6"
 "discord.py-self" = "2.0.0"
-python-dotenv = "1.0.0"
+python-dotenv = "1.0.1"
 
 
 [build-system]
